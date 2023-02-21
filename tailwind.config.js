@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         'crearCongreso': '#B5443A',
+        'tituloNavbar': '#A23636',
         'inicioSesion': '#BD8736'
       }
     },
