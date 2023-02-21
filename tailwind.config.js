@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'crearCongreso': '#B5443A',
+        'inicioSesion': '#BD8736'
+      }
+    },
   },
   plugins: [],
 }
