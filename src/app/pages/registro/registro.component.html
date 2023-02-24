@@ -1,0 +1,54 @@
+<section>
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-white dark:border-gray">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-gray-500 text-center">
+                    Registrate
+                </h1>
+                <form class="space-y-4 md:space-y-6" action="#" [formGroup]="loginForm" (ngSubmit)="save()">
+                    <div>
+                        <input type="text" formControlName="nombre" id="nombre" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Nombre" required="">
+                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)"  class="alert">
+                            <div *ngIf="nombre?.errors?.['required']">
+                              Por favor ingrese su nombre
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="apellidos" id="apellidos" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Apellidos" required="">
+                        <div *ngIf="apellidos?.invalid && (apellidos?.dirty || apellidos?.touched)"  class="alert">
+                            <div *ngIf="apellidos?.errors?.['required']">
+                              Por favor ingrese sus apellidos
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="email" formControlName="email" id="email" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Correo Electrónico" required="">
+                        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"  class="alert">
+                            <div *ngIf="email?.errors?.['required']">
+                                Por favor ingrese su correo electrónico
+                              </div>
+                            <div *ngIf="email?.errors?.['email']">
+                                Tu email es inválido
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="n_telefono" id="n_telefono" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Número de teléfono" required="">
+                        <div *ngIf="n_telefono?.invalid && (n_telefono?.dirty || n_telefono?.touched)"  class="alert">
+                            <div *ngIf="n_telefono?.errors?.['required']">
+                              Por favor ingrese su número de teléfono
+                            </div>
+                            <div *ngIf="n_telefono?.errors?.['minlength']">
+                                Tu número de teléfono debe de ser de 10 caracteres
+                              </div>
+                        </div>
+                    </div>
+                    <!--<button type="submit" class="w-full text-white bg-tituloNavbar focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-800"><a href="#">Iniciar Sesión</a></button>-->
+                    <button type="submit" class="w-full text-white bg-tituloNavbar focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-800">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+
